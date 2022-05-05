@@ -7,7 +7,7 @@ jobs:
     name: Build image
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: cde-mkdocs-ce
+      IMAGE_NAME: rtiffany/cde-mkdocs-ce
       REGISTRY: us.icr.io
     steps:
 
@@ -23,7 +23,7 @@ jobs:
         containerfiles: |
           ./Dockerfile
 
-    - name: Log in to the IBM Cloud Global Container registry
+    - name: Log in to the IBM Cloud Container registry (us-south endpoint)
       uses: redhat-actions/podman-login@v1
       with:
         registry: ${{ env.REGISTRY }}
