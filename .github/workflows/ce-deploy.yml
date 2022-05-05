@@ -1,0 +1,44 @@
+name: Deploy new version of Code Engine app
+
+on: [push]
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  IBM_CLOUD_API_KEY: ${{ secrets.REGISTRY_PASSWORD }}
+  IBM_CLOUD_REGION: us-south
+  IBM_CLOUD_RESOURCE_GROUP: 2022-cde-lab
+  ICR_NAMESPACE: rtiffany
+  REGISTRY_HOSTNAME: us.icr.io
+  IMAGE_NAME: mkdocs-caddy
+
+
+jobs:
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Download and Install IBM Cloud CLI
+    - name: Install IBM Cloud CLI
+      run: |
+        curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+        ibmcloud --version
+        ibmcloud config --check-version=false
+        ibmcloud plugin install -f code-engine
+        ibmcloud plugin install -f container-registry 
+    # Authenticate with IBM Cloud CLI
+    - name: Authenticate with IBM Cloud CLI
+      run: |
+        ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" -r "${IBM_CLOUD_REGION}" -g "${IBM_CLOUD_RESOURCE_GROUP}"
+        ibmcloud cr region-set "${IBM_CLOUD_REGION}"
+        ibmcloud cr login
+    
+    - name: Target Code Engine project 
+      run: |
+        ibmcloud ce project target --name "${CODE_ENGINE_PROJECT}"
+        ibmcloud ce app update --name "${CE_APP_NAME}" --build-source https://github.com/cloud-design-dev/cde-dev-guides --image "${REGISTRY_HOSTNAME}"/"${ICR_NAMESPACE}"/"${IMAGE_NAME}":"${GITHUB_SHA}" --registry-secret new-rs --port http1:80
+
