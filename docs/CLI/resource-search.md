@@ -1,11 +1,4 @@
----
-layout: default
-title: Searching with the IBM Cloud CLI
-parent: IBM Cloud CLI
-nav_order: 1
----
-
-# Command line examples for _ibmcloud resource search_
+# Resource Search
 
  - IaaS = Classic Infrastructure (SoftLayer) Resources.  
  - Cloud = IBM Cloud Resources.  
