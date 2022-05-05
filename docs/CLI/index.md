@@ -16,4 +16,5 @@ To start using the IBM Cloud [CLI][cli] you can install the tool [locally](#loca
 
 IBM Cloud Shell is a free service that gives you complete control of your cloud resources, applications, and infrastructure, from any web browser. It’s instantly accessible from your free IBM Cloud account—no other installation is needed.
 
-In the IBM Cloud console, click the IBM Cloud Shell icon ![IBM Cloud Shell icon](../../images/terminal-cloud-shell.svg). A session starts and automatically logs you in through the IBM Cloud CLI. The direct link to open a new session is `https://cloud.ibm.com/shell`.
+In the IBM Cloud console, click the IBM Cloud Shell icon ![IBM Cloud Shell icon](terminal-cloud-shell.svg). A session starts and automatically logs you in through the IBM Cloud CLI. The direct link to open a new session is 
+`https://cloud.ibm.com/shell`.
