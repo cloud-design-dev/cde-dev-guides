@@ -1,4 +1,4 @@
-name: Build updated mkdocs container
+name: Build and push to ICR
 on:
   - push
 
@@ -38,38 +38,5 @@ jobs:
         tags: ${{ steps.build-image.outputs.tags }}
         registry: ${{ env.REGISTRY }}
 
-
-
-# name: Log in to IBM Container Registry 
-# on:
-#   push:
-
-# env:
-#   REGISTRY_USER: iamapikey
-#   IMAGE_REGISTRY: 
-#   REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-
-# jobs:
-#   login:
-#     name: Log in to image registry
-#     runs-on: ubuntu-20.04
-#     steps:
-
-#       - name: Log in to US IBM Cloud Registry endpoint 
-#         uses: redhat-actions/podman-login@v1
-#         with:
-#           username: ${{ env.REGISTRY_USER }}
-#           password: ${{ env.REGISTRY_PASSWORD }}
-#           registry: ${{ env.IMAGE_REGISTRY }}
-
-  
-#       - name: Push To quay.io
-#         id: push-to-quay
-#         uses: redhat-actions/push-to-registry@v2
-#         with:
-#           image: ${{ steps.build-image.outputs.image }}
-#           tags: ${{ steps.build-image.outputs.tags }}
-
-
-#     - name: Print image url
-#       run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
+    - name: Print image url
+      run: echo "Image pushed to ${{ steps.push-to-icr.outputs.registry-paths }}"
