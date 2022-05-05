@@ -1,11 +1,5 @@
----
-layout: default
-title: Site to Site IPsec Tunnel to IBM Cloud VPC VPNaaS
-parent: IBM Cloud VPC
-nav_order: 1
----
+# Site to Site IPsec Tunnel to IBM Cloud VPC VPNaaS
 
-## Overview
 This article will walk you through the process of connecting on on-prem IPsec tunnel to the [IBM Cloud VPC VPN]() as a service offering. This will allow you to communicate from your local machine to the private IP addresses assigned to your VPC compute instances. In this guide you will walk through the following steps: 
 
  - Provisioning an instance of  VPC VPN as a Service 

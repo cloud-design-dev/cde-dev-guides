@@ -1,10 +1,3 @@
----
-layout: default
-title: Deploy a Wireguard VPN Server in IBM Cloud VPC using Terraform 
-parent: Terraform Examples 
-nav_order: 2
----
-
 # Wireguard Server on IBM Cloud VPC
 The repository will spin up a new VPC on IBM Cloud and configure a Wireguard VPN server as well as additional compute nodes spread across the VPC region. This will allow us to connect to each of the compute instances via our Wireguard server as well as hit the VPC Cloud Service endpoints. 
 

@@ -1,10 +1,3 @@
----
-layout: default
-title: Consul cluster in IBM Cloud VPC using Terraform and Ansible
-parent: Terraform Examples 
-nav_order: 1
----
-
 # Deploy a Consul cluster to an IBM Cloud VPC using Terraform and Ansible
 
 ## Prerequisites

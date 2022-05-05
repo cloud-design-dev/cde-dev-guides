@@ -2,8 +2,6 @@
 
 This guide will show you how to use [IBM Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-about) to build a container image from a Source control repository. Behind the scenes Code Engine will use [Tekton](https://tekton.dev/) pipelines to pull our source code from a Github repository and then create a container image using the supplied Docker file. After the build is complete Code Engine will push the new container image in to the [IBM Cloud Container Registry](https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview).
 
-**NOTE**: Code Engine is currently an experimental offering and all resources are deleted every 7 days.
-
 ## Start a session in IBM Cloud Shell
 In the IBM Cloud console, click the IBM Cloud Shell icon 
 

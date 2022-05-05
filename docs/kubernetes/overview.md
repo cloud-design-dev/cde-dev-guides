@@ -1,11 +1,4 @@
----
-layout: default
-title: Kubernetes 101 Overview
-parent: Kubernetes
-nav_order: 1
----
-
-# Overview
+# Kubernetes 101 Overview
 Kubernetes is a container orchestrator to provision, manage, and scale applications. In other words, Kubernetes allows you to manage the lifecycle of containerized applications within a cluster of nodes (which are a collection of worker machines, for example, VMs, physical machines etc.).
 
 Kubernetes does not have the concept of an application. It has simple building blocks that you are required to compose. Kubernetes is a cloud native platform where the internal resource model is the same as the end user resource model.
