@@ -1,25 +1,5 @@
----
-layout: default
-title: Using QuantaStor as a Persistent Volume Provider for Kubernetes
-parent: Kubernetes
-nav_order: 2
----
+# Using QuantaStor as a Persistent Volume Provider for Kubernetes
 
-- [Overview](#overview)
-  - [IBM Cloud Kubernetes Service (IKS)](#ibm-cloud-kubernetes-service-iks)
-    - [Single Zone Clusters](#single-zone-clusters)
-    - [Multizone Clusters](#multizone-clusters)
-  - [QuantaStor](#quantastor)
-  - [Prerequisites](#prerequisites)
-  - [Steps](#steps)
-    - [Use the slcli to get the IKS Worker Node IPs](#use-the-slcli-to-get-the-iks-worker-node-ips)
-    - [Create Storage Pool in QuantaStor](#create-storage-pool-in-quantastor)
-    - [Create QuantaStor Network Share](#create-quantastor-network-share)
-    - [Enable NFS access from IKS Worker node IPs](#enable-nfs-access-from-iks-worker-node-ips)
-    - [Deploy NFS provisioner Helm chart](#deploy-nfs-provisioner-helm-chart)
-    - [Deploy example pod and write to mounted persistent volume](#deploy-example-pod-and-write-to-mounted-persistent-volume)
-
-# Overview
 In this guide I will be showing you how to use QuantaStor as a persistent volume provider for Kubernetes on IBM Cloud.
 
 ## IBM Cloud Kubernetes Service (IKS)

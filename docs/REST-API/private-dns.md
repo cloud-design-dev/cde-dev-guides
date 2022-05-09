@@ -1,11 +1,5 @@
----
-layout: default
-title: Private DNS API
-parent: IBM Cloud Rest API
-nav_order: 3
----
+# Private DNS API
 
-# Overview
 This page shows examples of interacting with the IBM Cloud [Private DNS](https://cloud.ibm.com/apidocs/dns-svcs#introduction-to-dns-services-api) API.  
 
 **Table of Contents:**

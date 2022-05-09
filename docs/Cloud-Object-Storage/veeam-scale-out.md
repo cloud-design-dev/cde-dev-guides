@@ -1,10 +1,3 @@
----
-layout: default
-title: Scale Out Repository with Veeam and IBM COS
-parent: IBM Cloud Object Storage
-nav_order: 1
----
-
 # Scale Out Veeam Storage with IBM Cloud Object Storage
 
 ## Prerequisites

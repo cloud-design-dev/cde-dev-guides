@@ -1,11 +1,5 @@
----
-layout: default
-title: Virtual Private Cloud API
-parent: IBM Cloud Rest API
-nav_order: 2
----
+# Virtual Private Cloud API
 
-# Overview
 This page shows examples of interacting with the IBM Cloud [VPC API](https://cloud.ibm.com/apidocs/vpc).  
 
 **Table of Contents:**

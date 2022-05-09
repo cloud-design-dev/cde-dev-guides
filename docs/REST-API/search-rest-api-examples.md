@@ -1,11 +1,5 @@
----
-layout: default
-title: Search API Examples
-parent: IBM Cloud Rest API
-nav_order: 1
----
+# Search API 
 
-# Overview
 This page shows examples of interacting with the IBM Cloud REST [Search API](https://cloud.ibm.com/apidocs/search).  
 
 ## Prerequisites
