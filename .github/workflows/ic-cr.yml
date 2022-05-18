@@ -23,14 +23,14 @@ jobs:
         containerfiles: |
           ./Dockerfile
 
-    - name: Log in to the IBM Cloud Container registry (us-south endpoint)
+    - name: Log in to the IBM Cloud Container registry with podman
       uses: redhat-actions/podman-login@v1
       with:
         registry: ${{ env.REGISTRY }}
         username: iamapikey
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        password: ${{ secrets.IBM_CLOUD_API_KEY }}
 
-    - name: Push to IBM Cloud Global Container Repository
+    - name: Push to IBM Cloud Container Repository
       id: push-to-icr
       uses: redhat-actions/push-to-registry@v2
       with:
